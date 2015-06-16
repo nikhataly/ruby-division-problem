@@ -8,6 +8,7 @@
 # -You cant use / * %
 # -Try to think of edge cases as well
 # -assuming I can't use abs because I cant use *
+
 def return_quotient(a, b)
   n = 1
   sum = 0
@@ -17,15 +18,20 @@ def return_quotient(a, b)
     puts "0"
   else
 
-    # if a < 0
-    #   a = a +
-    # end
-    # if b < 0
-    #   b = b +
-    # end
+    if a < 0
+      c = (0 - a)
+    else
+      c = a
+    end
 
-    c = a.abs
-    d = b.abs
+    if b < 0
+      d = (0 - b)
+    else
+      d = b
+    end
+
+    # c = a.abs
+    # d = b.abs
 
     while (sum < c)
       sum += d
@@ -44,6 +50,6 @@ def return_quotient(a, b)
 
 end
 
-return_quotient((-45), (5))
+return_quotient((45), (5))
 # assert_equal(0, b)
 
