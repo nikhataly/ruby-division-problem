@@ -9,16 +9,16 @@
 # -Try to think of edge cases as well
 
 def return_quotient(a, b)
-
-  case positive_or_negative
+  a = a.to_i
+  b = b.to_i
+  case (a, b)
   when a == 0 && b == 0
     "0"
   else
     "hi"
-
   end
-
 end
 
-# assert_equal "0".to_i, return_quotient(0, 0)
-# return_quotient
+return_quotient(5, 5)
+# assert_equal(0, b)
+
