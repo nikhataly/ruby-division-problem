@@ -9,16 +9,18 @@
 # -Try to think of edge cases as well
 
 def return_quotient(a, b)
-  a = a.to_i
-  b = b.to_i
-  case (a, b)
-  when a == 0 && b == 0
-    "0"
-  else
-    "hi"
+  n = 1
+  sum = 0
+  while (sum < a) do
+    n.times do
+      sum += b
+    end
+      n++
   end
+  sum
+  puts (n - 1)
 end
 
-return_quotient(5, 5)
+return_quotient(55, 5)
 # assert_equal(0, b)
 
