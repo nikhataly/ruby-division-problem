@@ -16,13 +16,20 @@ def return_quotient(a, b)
   elsif a == 0
     puts "0"
   else
+
     while (sum < a)
       sum += b
       n = n + 1
     end
 
-    puts (n - 1)
+    if a < 0 || b < 0
+      puts (0 - (n-1))
+    else
+      puts (n-1)
+    end
+
   end
+
 end
 
 return_quotient(0, 9)
