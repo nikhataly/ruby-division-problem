@@ -7,7 +7,7 @@
 
 # -You cant use / * %
 # -Try to think of edge cases as well
-
+# -assuming I can't use abs because I cant use *
 def return_quotient(a, b)
   n = 1
   sum = 0
@@ -17,12 +17,24 @@ def return_quotient(a, b)
     puts "0"
   else
 
-    while (sum < a)
-      sum += b
+    # if a < 0
+    #   a = a +
+    # end
+    # if b < 0
+    #   b = b +
+    # end
+
+    c = a.abs
+    d = b.abs
+
+    while (sum < c)
+      sum += d
       n = n + 1
     end
 
-    if a < 0 || b < 0
+    if a < 0 && b < 0
+      puts (n-1)
+    elsif a < 0 || b < 0
       puts (0 - (n-1))
     else
       puts (n-1)
@@ -32,6 +44,6 @@ def return_quotient(a, b)
 
 end
 
-return_quotient(0, 9)
+return_quotient((-45), (5))
 # assert_equal(0, b)
 
