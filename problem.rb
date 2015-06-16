@@ -11,16 +11,14 @@
 def return_quotient(a, b)
   n = 1
   sum = 0
-  while (sum < a) do
-    n.times do
-      sum += b
-    end
-      n++
+  if (sum < a)
+    sum += b
+    n = n + 1
   end
-  sum
+
   puts (n - 1)
 end
 
-return_quotient(55, 5)
+return_quotient(30, 5)
 # assert_equal(0, b)
 
